@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Different colors notations
+normal color names          names: red, blue, green
+red, green, blue            rgb: rgb(255, 255, 255)
+hexadecimal values          hex: #ffffff
+hue, saturation, lightness  hsl: hsl(0, 52%, 100%)
+multiple colors combination liner-gradient: (direction, colorstop1, colorstop2,.......)
+background-color: red; /* For browsers that do not support gradients */
+background-image: linear-gradient(to bottom, red, yellow);
+This repeats the pattern
+background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+Radial Gradient 
+background-image: radial-gradient(shape size at position, start-color, ..., last-color);
+A radial gradient is defined by its center. radial-gradient(red 5%, yellow 15%, green 60%);
+To create a radial gradient you must also define at least two color stops.
+The size parameter defines the size of the gradient. It can take four values:
+background-image: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+closest-side
+farthest-side
+closest-corner
+farthest-corner     
+
+A conic gradient is a gradient with color transitions rotated around a center point.
+To create a conic gradient you must define at least two colors.
+Syntax
+background-image: conic-gradient([from angle] [at position,] color [degree], color [degree], ...);
+
+    -->
+    <style>
+        #root1{
+            width:100%;
+            height:100px;
+            background-color: green;
+        }
+        #root2{
+            width:100%;
+            height:100px;
+            background-color : rgb(255, 140, 255);
+        }
+        #root3{
+            width:100%;
+            height:100px;
+            background-color: #ffff34;
+            
+        }
+
+        #root4{
+            width:100%;
+            height:100px;
+            background-color : hsl(0, 52%, 10%);
+        }
+        #root5{
+            width:100%;
+            height:100px;
+            background-image : linear-gradient(to right, red, blue, green);
+        }
+        #root6{
+            width:100%;
+            height:100px;
+            background: radial-gradient(closest-side at 60% 55%, red, yellow, black);
+        }
+        
+        #root7{
+            width:100%;
+            height:100px;
+            background-image: radial-gradient(circle, red, yellow, green);
+        }
+        #root8{
+            width:100%;
+            height:100px;
+            background-image: repeating-linear-gradient(red, yellow 10%, green 20%);
+        }
+        #root9{
+            width:100%;
+            height:100px;
+            background-image: conic-gradient(red, yellow, green, blue, black);
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="root1"></div><br>
+    <div id="root2"></div><br>
+    <div id="root3"></div><br>
+
+    <div id="root4"></div><br>
+    <div id="root5"></div><br>
+    <div id="root6"></div><br>
+    <div id="root7"></div><br>
+    <div id="root8"></div><br>
+    <div id="root9"></div><br>
+</body>
+</html>

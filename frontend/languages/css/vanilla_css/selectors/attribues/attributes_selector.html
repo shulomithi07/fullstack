@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- So these are attribute selectors
+        The attribute selectors are to be given in square brackets, 
+        If we just want to select the a tag with specific attributes then 
+        this type of selection can be used
+
+    -->
+    <style>
+        [href='http://']{
+            background-color: indigo;
+            color:white;
+            width:100px
+        }
+        [target]{
+            background-color: brown;
+            color:white;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    
+        <a href="">none</a>
+        <a href="http://">with http1</a>
+        <a href="" target="_blank" rel="noopener noreferrer">target1</a>
+        <a href="http://">with http2</a>
+        <a href="" target="_blank" rel="noopener noreferrer">target2</a>
+</body>
+</html>

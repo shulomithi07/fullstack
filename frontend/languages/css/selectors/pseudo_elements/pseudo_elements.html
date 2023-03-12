@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Pseudo Elements are used to select specific parts of elements 
+        not the whole element just the specific part of the element -->
+    <style>
+        input{
+            width: 250px;
+        }
+        #test::placeholder{
+            font-style: italic;
+            color:green;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" placeholder="normal placeholder">
+    <input type="text" id="test" placeholder="placeholder changes the style to italic">
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- This is a little confusing topic
+        The position relative tells that what ever that comes under it should be relative to that paticular block
+        This adjusts the position relative to that of its normal position
+        The element with absolute positions itself with its nearest positional ancestors with there is no positional ancestor then 
+        it uses the document body and moves along with scroll
+    -->
+    <style>
+
+        .dropdown{
+            position: relative;
+            display: inline-block;
+        }
+        #dropdown-content{
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 400px;
+            background-color: green;
+            color: white
+            
+        }
+        .dropdown:hover #dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <span>Hover over me</span>
+
+    <div id="dropdown-content">
+        <p>This is the text of dropdown</p>
+    </div>
+    </div>
+    <h1>abc</h1>
+</body>
+</html>

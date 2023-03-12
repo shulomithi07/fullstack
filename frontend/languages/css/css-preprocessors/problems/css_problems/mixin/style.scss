@@ -1,0 +1,17 @@
+@mixin common_elements($bg: black, $co, $fz){
+    background-color: $bg;
+    color: $co;
+    font-size: $fz;
+}
+
+#heading-1{
+    @include common_elements(green, white, 40px);
+}
+
+#heading-2{
+    @include common_elements(red, white, 50px);
+}
+
+#heading-3{
+    @include common_elements(blue, white, 60px )
+}

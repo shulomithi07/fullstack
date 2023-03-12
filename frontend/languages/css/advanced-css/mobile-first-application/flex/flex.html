@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Flex is good for one direction but it cannot handle 2 directions -->
+    <style>
+
+        .container{
+            border: 2px solid black;
+            width: 100%;
+            height: 900px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 2px 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box" id="box_">1</div>
+        <div class="box" id="box_">2</div>
+        <div class="box" id="box_">3</div>
+        <div class="box" id="box_">4</div>
+        <div class="box" id="box_">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+div {
+  background-color: green;
+}
+div h1 {
+  background-color: red;
+}
+div h1 p {
+  background-color: pink;
+}
+div h1 p a {
+  color: grey;
+}/*# sourceMappingURL=nesting.css.map */

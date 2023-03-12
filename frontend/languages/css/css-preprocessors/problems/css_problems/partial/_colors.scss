@@ -1,0 +1,6 @@
+$background_color : green;
+
+@mixin common($w, $h){
+    width: $w;
+    height: $h;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+
+    <script>
+        function addChild(data, elementTag){
+            var tag = document.createElement(elementTag);
+            tag.innerHTML = data
+            document.getElementById('root').appendChild(tag)
+        }
+
+        addChild('h1 element', 'h1')
+        addChild('abc', 'h2')
+        addChild("h3 element", 'h3')
+        addChild('h4 element', 'h4')
+        addChild('h5 element', 'h5')
+        addChild('h6 element', 'h6')
+
+
+    </script>
+
+</body>
+</html>

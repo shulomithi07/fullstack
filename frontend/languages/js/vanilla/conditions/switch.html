@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <center>
+        <h1>Guessing Game</h1>
+        <div id="root"></div>
+        <button onclick="guess()">generate</button>
+    </center>
+    
+    <script>
+        function rand(){
+            var random = Math.floor(Math.random()*6 + 1)
+            <!--  -->
+            return random
+        }
+
+        function guess(){
+            var number = null
+            switch(rand()){
+                case 1:
+                    number = 1
+                    break
+                case 2:
+                    number = 2
+                    break
+                case 3:
+                    number = 3
+                    break
+                case 4:
+                    number = 4
+                    break
+                case 5:
+                    number = 5
+                    break
+                case 6:
+                    number = 6
+                    break
+            }
+
+            document.getElementById('root').innerHTML = number
+        }
+
+
+    </script>
+</body>
+</html>

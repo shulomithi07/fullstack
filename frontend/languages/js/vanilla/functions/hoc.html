@@ -1,0 +1,20 @@
+<script>
+
+    // Little confusing read about this topic
+
+    function contextSetting(){
+        var fruits = []
+        function setFruits(data){
+            fruits.push(data)
+            return fruits
+        }
+        return [fruits, setFruits]
+    }
+
+<!-- Desutructure -->
+    var [fruits, setFruits] = contextSetting()
+
+    console.log(fruits)
+    console.log(setFruits("abc"))
+    console.log(setFruits("def"))
+</script>

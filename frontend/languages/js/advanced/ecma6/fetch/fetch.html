@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .state{
+            background-color: rgb(93, 93, 241);
+            color: white;
+            width: 400px;
+            height: 300px;
+            margin: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            animation: stateanimation 20s linear infinite;
+        }
+
+        @keyframes stateanimation{
+            
+            0%{background-color: grey; border-radius: 50%; left:0; top:0;}
+            25%{background-color: rgb(168, 65, 65);  border-radius: 40%; left:100%; top:0;}
+            50%{background-color: rgb(91, 82, 141);  border-radius: 30%; left:50%; top:200px; }
+            75%{background-color: rgb(77, 82, 34);  border-radius: 20%;  left:0; top:200px; }
+            100%{background-color: rgb(248, 51, 166); border-radius: 10%; left:0; top:0;}
+        }                                                               
+        .stateCode{
+            width: 100px;
+            height: 30px;
+            display: none;
+            animation: statecode 15s linear infinite
+        }
+
+        @keyframes statecode {
+            0% {
+                display: none;
+            }
+            25% {
+                display: none;
+            }
+            50% {
+                display: none;
+            }
+            75% {
+                display: none;
+            }
+            100% {
+                opacity: 100%;
+                display: block;
+            }
+        }
+
+        .stateName{
+            width: 200px;
+            height: 30px;
+            animation: statename 15s linear infinite
+        }
+
+        @keyframes statename {
+            0% {
+                opacity: 0%;
+            }
+            25% {
+                opacity: 0%;
+            }
+            50% {
+                opacity: 100%;
+            }
+            75% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 0%;
+            }
+        }
+
+        .stateActive{
+            width: 200px;
+            height: 30px;
+            animation: stateactive 15s linear infinite
+        }
+
+        @keyframes stateactive {
+            0% {
+                opacity: 100%;
+            }
+            25% {
+                opacity: 0%;
+            }
+            50% {
+                opacity: 0%;
+            }
+            75% {
+                opacity: 0%;
+            }
+            100% {
+                opacity: 0%;
+            }
+        }
+
+        .stateRecovered{
+            width: 200px;
+            height: 30px;
+            animation: staterecovered 15s linear infinite
+        }
+
+        @keyframes staterecovered {
+            0% {
+                opacity: 0%;
+            }
+            25% {
+                opacity: 0%;
+            }
+            50% {
+                opacity: 0%;
+            }
+            75% {
+                opacity: 100%;
+            }
+            100% {
+                opacity: 0%;
+            }
+        }
+        
+    </style>
+
+</head>
+<body>
+    
+    <div id="root">
+
+    </div>
+    <script>
+        var covidData = fetch("https://data.covid19india.org/data.json").then((data)=>{
+            return data.json()
+        })
+
+        console.log("abgf")
+        var count = 1
+        covidData.then((covidDetails)=>{
+            stateWiseDetails = covidDetails.statewise
+            stateWiseDetails.map((eachState)=>{
+                count += 1
+                var element = document.createElement('div')
+                element.setAttribute('id', eachState.statecode)
+                element.setAttribute('class', 'state')
+                
+                var eachStateCode = document.createElement('div')
+                eachStateCode.setAttribute('class', 'stateCode')
+                eachStateCode.innerHTML = `stateCode : ${eachState.statecode}`
+                
+                var eachStateName = document.createElement('div')
+                eachStateName.setAttribute('class', 'stateName')
+                eachStateName.innerHTML = `stateName : ${eachState.state}`
+                
+                var eachStateActive = document.createElement('div')
+                eachStateActive.setAttribute('class', 'stateActive')
+                eachStateActive.innerHTML = `active : ${eachState.active}`
+                
+                var eachStateRecovered = document.createElement('div')
+                eachStateRecovered.setAttribute('class', 'stateRecovered')
+                eachStateRecovered.innerHTML = `recovered : ${eachState.recovered}`
+
+                document.getElementById('root').appendChild(element)
+                document.getElementById(eachState.statecode).appendChild(eachStateName)
+                document.getElementById(eachState.statecode).appendChild(eachStateCode)
+                document.getElementById(eachState.statecode).appendChild(eachStateActive)
+                document.getElementById(eachState.statecode).appendChild(eachStateRecovered)
+                console.log(document.getElementById(eachState.statecode))
+            })
+        })
+    </script>
+</body>
+</html>
+
+  <!-- console.log(count)
+                console.log(eachState) -->

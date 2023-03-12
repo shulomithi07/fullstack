@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formClass{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="runModelBtn">1</button>
+    <button id="hostAnnotationsBtn">2</button>
+    <button id="mergeDatasetBtn">3</button>
+
+    <div class=formClass id="runModelForm">Run Model</div>
+    <div class=formClass id="hostAnnotationsForm">Host Annotations</div>
+    <div class=formClass id="mergeDatasetForm">Merge Dataset</div>
+
+    <script>
+        
+        let elements = [
+                { 
+                    btn: document.getElementById('runModelBtn'), 
+                    div: document.getElementById('runModelForm')
+                }, 
+                {
+                    btn: document.getElementById('hostAnnotationsBtn'),
+                    div: document.getElementById('hostAnnotationsForm')
+                },
+                {
+                    btn: document.getElementById('mergeDatasetBtn'), 
+                    div: document.getElementById('mergeDatasetForm')
+                }
+            ]
+        
+
+        elements.forEach((element) => {
+            element.btn.addEventListener('click', () => {
+                elements.forEach((ele) =>{
+                    ele.div.style.display = 'none'
+                });
+                element.div.style.display = 'block'
+            })
+        })
+        
+        
+    </script>
+</body>
+</html>

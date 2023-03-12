@@ -1,0 +1,25 @@
+So typescript is a superset of javascript
+It basically converts javascript to a statically typed languange as originally javascript is dynamically typed languange
+It can help in code completion
+It also supports refactoring
+It also supports Shorthand notations
+
+
+DrawBacks
+As typescript is not browser supported there is always 
+a step of compilation of the ts code to convert it to javascript
+This process is called as tranpilation
+
+There should be discipline in coding
+
+Typescript --> Medium to large projects
+Javascript --> Simple projects
+
+
+You can also annotate your typescript variable or function with type: any
+But it contradicts the idea of typescript where we can handle the static type
+It is not much preferred to use type any
+
+
+Type alias
+This is something like we create an object and use it as a predefined object
